@@ -11,7 +11,6 @@ const VerifyIsEmail = () => (
 			/>
 			<link rel='icon' href='/favicon.ico' />
 		</Head>
-		<EmailVerified />
 	</div>
 );
 export default VerifyIsEmail;
