@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { SAMPLE_FORM_TYPES } from '@/utils';
-import { EConsentFormData } from '@/utils/EConsentFormData';
+
 
 export const loginModalSlice = createSlice({
 	name: 'walletModal',

@@ -1,5 +1,3 @@
-import SignUpHeader from '../signup/SignUpHeader';
-
 interface ILayout {
 	children: React.ReactNode;
 	src: string;
@@ -18,11 +16,7 @@ const BackgroundImage = ({ children, src }: ILayout) => (
 				overflow: 'visible',
 				filter: 'blur(30px)',
 			}}
-		>
-			<div className='sm:hidden block absolute left-5'>
-				<SignUpHeader />
-			</div>
-		</div>
+		></div>
 		{children}
 	</main>
 );
