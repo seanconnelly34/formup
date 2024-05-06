@@ -1,0 +1,22 @@
+{
+	"extends": ["next/core-web-vitals"],
+	"rules": {
+		"indent": 0,
+		"no-null-keyword": 0,
+		"prefer-const": 1,
+		"member-access": 0,
+		"no-bitwise": 1,
+		"no-console": [1],
+		"no-debugger": 1,
+		"no-empty": 0,
+		"no-eval": 1,
+		"no-non-null-assertion": 0,
+		"no-string-literal": 0,
+		"no-submodule-imports": 0,
+		"object-literal-sort-keys": 0,
+		"radix": 1,
+		"variable-name": 0,
+		"ordered-imports": 0,
+		"no-implicit-dependencies": 0
+	}
+}

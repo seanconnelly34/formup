@@ -1,0 +1,10 @@
+# Ignore artifacts:
+*.properties
+node_modules
+public
+assets
+.next
+.husky
+.env.example
+.gitignore
+.prettierignore
