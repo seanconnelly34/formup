@@ -7,7 +7,7 @@ import { HistoryPlugin } from '@lexical/react/LexicalHistoryPlugin';
 import { AutoFocusPlugin } from '@lexical/react/LexicalAutoFocusPlugin';
 import LexicalErrorBoundary from '@lexical/react/LexicalErrorBoundary';
 import TreeViewPlugin from './plugins/TreeViewPlugin';
-import ToolbarPlugin from './plugins/ToolbarPlugin';
+import ToolBarPlugin from './plugins/ToolBarPlugin';
 import { HeadingNode, QuoteNode } from '@lexical/rich-text';
 import { TableCellNode, TableNode, TableRowNode } from '@lexical/table';
 import { ListItemNode, ListNode } from '@lexical/list';
@@ -58,30 +58,14 @@ export default function Editor({ id, value, list }) {
 		],
 	};
 
-	// const fack = (editorState) => {
-
-	// 	editorStateRef.current = editorState;
-	// 	const htmlString = $generateHtmlFromNodes(editorState);
-	
-	// };
-
 	const onChange = (editorState, editor) => {
 		//JSON.stringify(editor.getEditorState());
 		let raw;
 
 		editorState.read(() => {
 			raw = $generateHtmlFromNodes(editor, null);
-			
 		});
 		dispatch(setInputValues({ id, list, value: raw }));
-		//setEditorContent(raw);
-		//dont use update, use othre method maybe
-		// editor.update(() => {
-		// 	raw = $generateHtmlFromNodes(editor, null);
-
-		// 	//setEditorContent(raw);
-		// });
-		//dispatch(setInputValues({ id, list, value:raw }));
 	};
 
 	useEffect(() => {
@@ -92,11 +76,10 @@ export default function Editor({ id, value, list }) {
 		}
 	}, []);
 
-	
 	return (
 		<LexicalComposer initialConfig={editorConfig}>
 			<div className='editor-container'>
-				<ToolbarPlugin />
+				<ToolBarPlugin />
 				<div className='editor-inner' ref={editorStateRef}>
 					<RichTextPlugin
 						contentEditable={
